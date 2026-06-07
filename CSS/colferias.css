@@ -1,0 +1,254 @@
+a button{
+        background-color: rgb(79, 230, 79);
+        border-radius: 40px;
+        cursor: pointer; 
+        padding: 10px 20px;
+        border: none;
+        font-size: 0.95rem;
+        font-weight: bold;
+        transition: background-color 0.2s, transform 0.1s;
+}
+
+a button:hover{
+        background-color: rgb(50, 190, 50);
+        transform: scale(1.05);
+}
+
+ p{
+    color: white;
+    flex-direction: column;
+    align-self: last baseline;
+    line-height: 1.6;
+}
+
+b{
+    color: rgb(79, 230, 79);
+}
+
+h1{
+    align-items: center;
+    justify-content: center;
+    color:#00ff41;
+    font-size: clamp(1.2rem, 3vw, 2rem);
+    }
+
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #00ff41;
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    }
+
+.botonTraduccion{
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 999;
+}
+
+.botonTraduccion button{
+    background-color: rgb(79, 230, 79);
+    border-radius: 40px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.botonTraduccion button:hover{
+    background-color: rgb(50, 190, 50);
+    transform: scale(1.05);
+}
+
+.Introduccion{
+    display: flex;
+    align-items: center;
+    height: auto;
+    display: block;
+    flex-direction: column;
+    padding: 100px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .botonIntroduccion{
+        display: block;
+        align-items: baseline;
+        justify-content: baseline;
+        margin-bottom: 20px;
+    }
+
+    img {
+        max-width: 100% ;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        border-radius: 10px;
+        border: 2px solid #00ff41;
+    }    
+}
+
+
+.Conferencia1{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 65px 5%;
+    height: auto;
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.carrusel{
+        width: 100%;
+        max-width: 600px;
+        overflow: hidden;
+        border: 2px solid #00ff41;
+        border-radius: 10px;
+        margin: 20px auto;
+}
+
+.carruselImagenes{
+        display: flex;
+        animation: desplazar 20s infinite;    
+}
+
+.carruselImagenes img {
+    min-width: 100%;
+    max-width: 100% ;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+@keyframes desplazar {
+    0% { transform: translateX(0); }
+    33% { transform: translateX(-33.100%); }
+    66% { transform: translateX(-66.100%); }
+    100% { transform: translateX(0); }
+}
+
+
+.conferencia2{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 65px 5%;
+    height: auto;
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.glosario{
+    margin-top: 40px;
+    padding: 20px;
+    border: 2px solid #00ff41;
+    border-radius: 10px;
+}
+
+.glosario h2{
+    margin-bottom: 14px;
+}
+
+.tablaGlosario{
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    font-size: 0.95rem;
+    overflow-x: auto;
+    display: block;
+}
+
+.tablaGlosario th{
+    background-color: rgba(0, 255, 65, 0.2);
+    color: #00ff41;
+    padding: 10px 14px;
+    border: 1px solid #00ff41;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.tablaGlosario td{
+    padding: 10px 14px;
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    vertical-align: top;
+}
+
+.tablaGlosario tr:nth-child(even) td{
+    background-color: rgba(255,255,255,0.04);
+}
+
+/* ---- IMAGEN PLACEHOLDER ---- */
+.imagenPlaceholder{
+    width: 100%;
+    max-width: 600px;
+    height: 280px;
+    background-color: rgba(0, 255, 65, 0.07);
+    border: 2px dashed #00ff41;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0,255,65,0.5);
+    font-size: 0.9rem;
+    margin: 20px auto;
+}
+
+
+body{
+    background: linear-gradient(135deg,#802996,#3d1150);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+@media (max-width: 768px){
+    .Introduccion{
+        padding: 80px 4% 40px;
+    }
+
+    .Conferencia1,
+    .conferencia2{
+        padding: 40px 4%;
+    }
+
+    .botonTraduccion{
+        top: 10px;
+        right: 10px;
+    }
+
+    .botonTraduccion button{
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+
+    .tablaGlosario{
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px){
+    h1{
+        font-size: 1.1rem;
+    }
+
+    h2{
+        font-size: 1rem;
+    }
+
+    p{
+        font-size: 0.9rem;
+    }
+
+    a button{
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+}

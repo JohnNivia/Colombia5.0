@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda conferencia</title>
+    <link rel="stylesheet" href="/CSS/colferias.css">
+</head>
+<body>
+
+
+    <div class="botonTraduccion">
+        <button onclick="traducir()"> English</button>
+    </div>
+
+    <div class="conferencia2">
+        <a href="/primeraConferencia.html"><button data-es="Primera conferencia" data-en="First conference">Primera conferencia</button></a>
+
+        <h1 data-es="Colombia 5.0 Conferencia Numero 2 y experiencia en el evento"
+            data-en="Colombia 5.0 Conference Number 2 and event experience">
+            Colombia 5.0 Conferencia Numero 2 y experiencia en el evento
+        </h1>
+
+        <h2 data-es="Conferencia ciberseguridad" data-en="Cybersecurity conference">Conferencia ciberseguridad</h2>
+
+        <p>
+            <b data-es="Nombre de la conferencia: " data-en="Conference name: ">Nombre de la conferencia: </b>
+            <span data-es="Proteccion de infrastructuras digitales criticas: Gobernanza y ciberseguridad de redes moviles para la soberania Nacional"
+                  data-en="Protection of critical digital infrastructures: Governance and cybersecurity of mobile networks for National sovereignty">
+                Proteccion de infrastructuras digitales criticas: Gobernanza y ciberseguridad
+                de redes moviles para la soberania Nacional
+            </span>
+        </p>
+        <p>
+            <b data-es="Nombre conferencista: " data-en="Speaker name: ">Nombre conferencista: </b>
+            <span>Yanis Cardoso Stoyannis</span>
+        </p>
+        <p>
+            <b data-es="Tema principal:" data-en="Main topic:">Tema principal:</b>
+            <span data-es=" Charla sobre ciberseguridad" data-en=" Talk about cybersecurity"> Charla sobre ciberseguridad</span>
+        </p>
+
+        <h2 data-es="Resumen" data-en="Summary">Resumen</h2>
+        <p data-es="En esta conferencia participó un empresario portugués que habló sobre algunas de las tecnologías e innovaciones que podrían desarrollarse en el futuro. Entre los temas de que se hablaron fue una nueva generación de supercomputadoras y el avance hacia la tecnología 6G."
+           data-en="This conference featured a Portuguese businessman who spoke about some of the technologies and innovations that could be developed in the future. Among the topics discussed was a new generation of supercomputers and the advance towards 6G technology.">
+            En esta conferencia participó un empresario portugués que habló sobre algunas de las tecnologías e innovaciones 
+            que podrían desarrollarse en el futuro. Entre los temas de que se hablaron fue una nueva generación de supercomputadoras
+            y el avance hacia la tecnología 6G. 
+        </p>
+        <p data-es="Ademas se hablo sobre el tema de la ciberseguridad, explicando las diferentes vulnerabilidades que puede presentar un software, los métodos que utilizan los atacantes para explotar estas fallas y las consecuencias que pueden generar para los usuarios."
+           data-en="Cybersecurity was also discussed, explaining the different vulnerabilities that software can present, the methods attackers use to exploit these flaws and the consequences they can generate for users.">
+            Ademas se hablo sobre el tema de la ciberseguridad, explicando las diferentes vulnerabilidades que puede presentar un 
+            software, los métodos que utilizan los atacantes para explotar estas fallas y las consecuencias que pueden generar para 
+            los usuarios.
+        </p>
+
+        <h2 data-es="Experiencia durante el evento" data-en="Experience during the event">Experiencia durante el evento</h2>
+        <p data-es="Mientras recorria el evento visité los diferentes stands de empresas que estaban presentes en el evento y aproveche de enviar algunas hojas de vida, tambien participe en diferentes actividades. Una de las cuales participe fue la zona gamer, donde se realizaban concursos de videojuegos y actividad fisica. En una de ellas jugue boley pie, una actividad en la que debíamos hacer pases sin dejar caer el balon al piso. El primer equipo que llegara a 7 puntos era el ganador aunque perdi, disfrute del evento."
+           data-en="While touring the event I visited the different company stands that were present at the event and took the opportunity to send some resumes, I also participated in different activities. One of the activities I participated in was the gamer zone, where video game competitions and physical activity were held. In one of them I played boley pie, an activity where we had to make passes without letting the ball fall to the ground. The first team to reach 7 points was the winner, although I lost, I enjoyed the event.">
+            Mientras recorria el evento visité los diferentes stands de empresas que estaban presentes en el evento 
+            y aproveche de enviar algunas hojas de vida, tambien participe en diferentes actividades. Una de las 
+            cuales participe fue la zona gamer, donde se realizaban concursos de videojuegos y actividad fisica. En una de 
+            ellas jugue boley pie, una actividad en la que debíamos hacer pases sin dejar caer el balon al piso. 
+            El primer equipo que llegara a 7 puntos era el ganador aunque perdi, disfrute del evento.
+        </p>
+
+        <div class="carrusel">
+            <div class="carruselImagenes">
+                <img src="/IMG/conferencia2/imagen1.jfif" alt="conferencia2"
+                     onerror="this.style.display='none'">
+                <img src="/IMG/conferencia2/imagen2.jfif" alt="conferencia2"
+                     onerror="this.style.display='none'">
+                <img src="/IMG/conferencia2/imagen3.jfif" alt="conferencia2"
+                     onerror="this.style.display='none'">
+                <img src="/IMG/conferencia2/imagen4.jfif" alt="conferencia2"
+                     onerror="this.style.display='none'">
+                <img src="/IMG/fotogrupal.jpeg" alt="conferencia"
+                     onerror="this.style.display='none'">
+            </div>
+        </div>
+        <a href="/glosario.html"><button data-es="glosario" data-en="Glossary">Glosario</button></a>
+
+
+    <script>
+        var idiomaActual = 'es';
+
+        function traducir() {
+            var boton = document.querySelector('.botonTraduccion button');
+            if (idiomaActual === 'es') {
+                idiomaActual = 'en';
+                boton.textContent = 'Español';
+                document.documentElement.lang = 'en';
+            } else {
+                idiomaActual = 'es';
+                boton.textContent = 'English';
+                document.documentElement.lang = 'es';
+            }
+            var elementos = document.querySelectorAll('[data-es][data-en]');
+            for (var i = 0; i < elementos.length; i++) {
+                elementos[i].textContent = elementos[i].getAttribute('data-' + idiomaActual);
+            }
+        };
+    </script>
+
+</body>
+</html>
