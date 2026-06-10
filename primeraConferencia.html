@@ -3,91 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>primera conferencia</title>
+    <title>Colombia 5.0 – primera conferencia</title>
     <link rel="stylesheet" href="CSS/colferias.css">
 </head>
 <body>
 
-
-    <div class="botonTraduccion">
-        <button onclick="traducir()">English</button>
-    </div>
+    <nav class="navegacion-principal">
+        <span class="nombre-sitio">Colombia 5.0</span>
+        <ul class="lista-enlaces" id="lista-enlaces">
+            <li><a href="introduccion.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+            <li><a href="primeraConferencia.html" data-es="Primera conferencia" data-en="Firts conference">Primera conferencia</a></li>
+            <li><a href="segundaconferencia.html" data-es="Segunda conferencia" data-en="Second conference">Segunda conferencia</a></li>
+            <li><a href="glosario.html" data-es="Glosario" data-en="Glossary">Glosario</a></li>
+        </ul>
+        <div class="contenedor-idioma">
+            <button id="btnTraduccion" onclick="traducir()">English</button>
+        </div>
+        <button class="menu-movil" onclick="toggleMenu()" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
 
     <div class="Conferencia1">
-        <a href="index.html"><button data-es="Pagina de inicio" data-en="Home page">Pagina de inicio</button></a>
 
-        <h1 data-es="Colombia 5.0 conferencia numero 1" data-en="Colombia 5.0 conference number 1">Colombia 5.0 conferencia numero 1</h1>
-        <h2 data-es="Primera conferencia" data-en="First conference">Primera conferencia</h2>
+        <h1 data-es="Colombia 5.0 – Conferencia 1" data-en="Colombia 5.0 – Conference 1">Colombia 5.0 – Conferencia 1</h1>
+        <h2 data-es="Game UI Systems" data-en="Game UI Systems">Game UI Systems</h2>
 
         <p>
             <b data-es="Nombre de la conferencia:" data-en="Conference name:">Nombre de la conferencia:</b>
             <span data-es=" Game UI Systems: de pantallas bonitas a interfaces que funcionan"
-                  data-en=" Game UI Systems: from pretty screens to interfaces that work"> Game UI Systems: de pantallas bonitas a interfaces que funcionan</span>
+                  data-en=" Game UI Systems: from pretty screens to interfaces that work">
+                Game UI Systems: de pantallas bonitas a interfaces que funcionan
+            </span>
         </p>
         <p>
-            <b data-es="Nombre del conferencista:" data-en="Speaker name:">Nombre del conferencista:</b>
+            <b data-es="Conferencista:" data-en="Speaker:">Conferencista:</b>
             <span> Andres Felipe Pisso Tobar</span>
         </p>
         <p>
             <b data-es="Tema principal:" data-en="Main topic:">Tema principal:</b>
-            <span data-es=" Interfaces figma" data-en=" Figma interfaces"> Interfaces figma</span>
+            <span data-es=" Interfaces en Figma" data-en=" Figma interfaces"> Interfaces en Figma</span>
         </p>
 
         <h2 data-es="Resumen" data-en="Summary">Resumen</h2>
-        <p data-es="En esta conferencia se hablo sobre el uso de Figma para el diseño de interfaces de videojuegos, tambien explicaron cómo organizar los elementos visuales para evitar que la interfaz se vea sobrecargada, la importancia de utilizar iconos adecuados y consistentes, y como construir una mini base de Game UI mediante componentes reutilizables, estados y patrones de diseño que faciliten el desarrollo y mejoren la experiencia del usuario."
+        <p data-es="En esta conferencia se habló sobre el uso de Figma para el diseño de interfaces de videojuegos, también explicaron cómo organizar los elementos visuales para evitar que la interfaz se vea sobrecargada, la importancia de utilizar iconos adecuados y consistentes, y cómo construir una mini base de Game UI mediante componentes reutilizables, estados y patrones de diseño que faciliten el desarrollo y mejoren la experiencia del usuario."
            data-en="This conference discussed the use of Figma for the design of video game interfaces, they also explained how to organize visual elements to prevent the interface from looking overloaded, the importance of using adequate and consistent icons, and how to build a mini Game UI base using reusable components, states and design patterns that facilitate development and improve the user experience.">
-            En esta conferencia se hablo sobre el uso de Figma para el diseño de interfaces de videojuegos, 
-            tambien explicaron cómo organizar los elementos visuales para evitar que la interfaz se vea sobrecargada,
-            la importancia de utilizar iconos adecuados y consistentes, y como construir una mini base de Game UI 
-            mediante componentes reutilizables, estados y patrones de diseño que faciliten el desarrollo y mejoren 
-            la experiencia del usuario. 
+            En esta conferencia se habló sobre el uso de Figma para el diseño de interfaces de videojuegos,
+            también explicaron cómo organizar los elementos visuales para evitar que la interfaz se vea sobrecargada,
+            la importancia de utilizar iconos adecuados y consistentes, y cómo construir una mini base de Game UI
+            mediante componentes reutilizables, estados y patrones de diseño que faciliten el desarrollo y mejoren
+            la experiencia del usuario.
         </p>
 
-
-        <div class="carrusel">
-            <div class="carruselImagenes">
-                <img src="IMG/conferencia1/imagen1.jfif" alt="Conferencia1"
-                     onerror="this.style.display='none'">
-                <img src="IMG/conferencia1/imagen2.jfif" alt="conferencia1"
-                     onerror="this.style.display='none'">
-                <img src="IMG/conferencia1/imagen3.jfif" alt="conferencia1"
-                     onerror="this.style.display='none'">
-                <img src="IMG/conferencia1/imagen4.jfif" alt="conferencia1"
-                     onerror="this.style.display='none'">
-                <img src="IMG/conferencia1/imagen5.jfif" alt="conferencia1"
-                     onerror="this.style.display='none'">
-                <img src="IMG/conferencia1/imagen6.jfif" alt="conferencia1"
-                     onerror="this.style.display='none'">
+        <div class="carrusel" id="carrusel1">
+            <div class="carruselPista">
+                <img src="IMG/conferencia1/imagen1.jfif" alt="Conferencia 1">
+                <img src="IMG/conferencia1/imagen2.jfif" alt="Conferencia 1">
+                <img src="IMG/conferencia1/imagen3.jfif" alt="Conferencia 1">
+                <img src="IMG/conferencia1/imagen4.jfif" alt="Conferencia 1">
+                <img src="IMG/conferencia1/imagen5.jfif" alt="Conferencia 1">
+                <img src="IMG/conferencia1/imagen6.jfif" alt="Conferencia 1">
             </div>
+            <button class="carruselBtn izq" aria-label="Anterior">&#8249;</button>
+            <button class="carruselBtn der" aria-label="Siguiente">&#8250;</button>
+            <div class="carruselPuntos"></div>
         </div>
-        </div>
-
-        <a href="segundaconferencia.html"><button data-es="Segunda conferencia" data-en="Second conference">Segunda conferencia</button></a>
-
     </div>
 
-    <script>
-        var idiomaActual = 'es';
-
-        function traducir() {
-            var boton = document.querySelector('.botonTraduccion button');
-            if (idiomaActual === 'es') {
-                idiomaActual = 'en';
-                boton.textContent = 'Español';
-                document.documentElement.lang = 'en';
-            } else {
-                idiomaActual = 'es';
-                boton.textContent = 'English';
-                document.documentElement.lang = 'es';
-            }
-            var elementos = document.querySelectorAll('[data-es][data-en]');
-            for (var i = 0; i < elementos.length; i++) {
-                elementos[i].textContent = elementos[i].getAttribute('data-' + idiomaActual);
-            }
-        }
-
-       ;
-    </script>
-
+    <script src="java/index.js"></script>
 </body>
 </html>
+!

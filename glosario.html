@@ -3,21 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glosario Técnico</title>
+    <title>Glosario</title>
     <link rel="stylesheet" href="CSS/colferias.css">
 </head>
 <body>
 
-    <div class="botonTraduccion">
-        <button onclick="traducir()"> English</button>
-    </div>
+<nav class="navegacion-principal">
+        <span class="nombre-sitio">Colombia 5.0</span>
+        <ul class="lista-enlaces" id="lista-enlaces">
+            <li><a href="introduccion.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+            <li><a href="primeraConferencia.html" data-es="Primera conferencia" data-en="Firts conference">Primera conferencia</a></li>
+            <li><a href="segundaconferencia.html" data-es="Segunda conferencia" data-en="Second conference">Segunda conferencia</a></li>
+            <li><a href="glosario.html" data-es="Glosario" data-en="Glossary">Glosario</a></li>
+        </ul>
+        <div class="contenedor-idioma">
+            <button id="btnTraduccion" onclick="traducir()">English</button>
+        </div>
+        <button class="menu-movil" onclick="toggleMenu()" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
 
     <div class="conferencia2">
-        <a href="segundaconferencia.html"><button data-es="segunda conferencia" data-en="second conference">Segunda conferencia</button></a>
 
         <h1 data-es="Glosario"
             data-en="Glossary">
-
         </h1>
 
         <div class="glosario">
@@ -275,25 +287,8 @@
             </table>
         </div>
             <script>
-        var idiomaActual = 'es';
-
-        function traducir() {
-            var boton = document.querySelector('.botonTraduccion button');
-            if (idiomaActual === 'es') {
-                idiomaActual = 'en';
-                boton.textContent = 'Español';
-                document.documentElement.lang = 'en';
-            } else {
-                idiomaActual = 'es';
-                boton.textContent = 'English';
-                document.documentElement.lang = 'es';
-            }
-            var elementos = document.querySelectorAll('[data-es][data-en]');
-            for (var i = 0; i < elementos.length; i++) {
-                elementos[i].textContent = elementos[i].getAttribute('data-' + idiomaActual);
-            }
-        };
     </script>
+    <script src="java/index.js"></script>
 
 
     </div>

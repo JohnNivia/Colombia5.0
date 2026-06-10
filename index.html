@@ -3,66 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IntroduccionColombia5.0</title>
+    <title>Colombia 5.0 – Inicio</title>
     <link rel="stylesheet" href="CSS/colferias.css">
 </head>
 <body>
 
-    <div class="botonTraduccion">
-        <button onclick="traducir()"> English</button>
-    </div>
+<nav class="navegacion-principal">
+        <span class="nombre-sitio">Colombia 5.0</span>
+        <ul class="lista-enlaces" id="lista-enlaces">
+            <li><a href="introduccion.html" data-es="Inicio" data-en="Home">Inicio</a></li>
+            <li><a href="primeraConferencia.html" data-es="Primera conferencia" data-en="Firts conference">Primera conferencia</a></li>
+            <li><a href="segundaconferencia.html" data-es="Segunda conferencia" data-en="Second conference">Segunda conferencia</a></li>
+            <li><a href="glosario.html" data-es="Glosario" data-en="Glossary">Glosario</a></li>
+        </ul>
+        <div class="contenedor-idioma">
+            <button id="btnTraduccion" onclick="traducir()">English</button>
+        </div>
+        <button class="menu-movil" onclick="toggleMenu()" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
 
     <div class="Introduccion">
+
         <div>
-    
             <img src="IMG/LogoCol5.jpeg" alt="Logo Colombia 5.0"
                  onerror="this.style.display='none'; document.getElementById('placeholderLogo').style.display='flex';">
-            <div id="placeholderLogo" class="imagenPlaceholder" style="display:none;">
-                
-            </div>
+            <div id="placeholderLogo" class="imagenPlaceholder" style="display:none;"></div>
         </div>
 
         <div class="textoIntroduccion">
-            <h2 data-es="Introduccion" data-en="Introduction">Introduccion</h2>
+            <h2 data-es="Introducción" data-en="Introduction">Introducción</h2>
             <p data-es="Colombia 5.0 Bogotá 2026 es un evento tecnológico que busca impulsar la transformación digital del país mediante la innovación, el desarrollo tecnológico y la formación en habilidades digitales. Esta iniciativa reúne a estudiantes, empresas, emprendedores y expertos en tecnología con el fin de promover el uso de herramientas digitales que ayuden al crecimiento económico y social de Colombia."
                data-en="Colombia 5.0 Bogotá 2026 is a technological event that seeks to promote the digital transformation of the country through innovation, technological development and training in digital skills. This initiative brings together students, companies, entrepreneurs and technology experts in order to promote the use of digital tools that help the economic and social growth of Colombia.">
                 Colombia 5.0 Bogotá 2026 es un evento tecnológico que busca impulsar la transformación digital del país mediante la innovación,
-                el desarrollo tecnológico y la formación en habilidades digitales. Esta iniciativa reúne a estudiantes, empresas, emprendedores 
-                y expertos en tecnología con el fin de promover el uso de herramientas digitales que ayuden al crecimiento económico y social de 
+                el desarrollo tecnológico y la formación en habilidades digitales. Esta iniciativa reúne a estudiantes, empresas, emprendedores
+                y expertos en tecnología con el fin de promover el uso de herramientas digitales que ayuden al crecimiento económico y social de
                 Colombia.
             </p>
             <h2 data-es="Objetivo" data-en="Objective">Objetivo</h2>
             <p data-es="El objetivo de Colombia 5.0 Bogotá 2026 fue impulsar la transformación digital del país utilizando la tecnología como herramienta para mejorar la calidad de vida, la productividad y la innovación en Colombia. El evento fue organizado por el Ministerio TIC y se realizó en Corferias, Bogotá."
                data-en="The objective of Colombia 5.0 Bogotá 2026 was to promote the digital transformation of the country using technology as a tool to improve the quality of life, productivity and innovation in Colombia. The event was organized by the Ministry of ICT and was held in Corferias, Bogotá.">
-                El objetivo de Colombia 5.0 Bogotá 2026 fue impulsar la transformación digital del país utilizando la tecnología como herramienta 
-                para mejorar la calidad de vida, la productividad y la innovación en Colombia. El evento fue organizado por el Ministerio TIC y 
+                El objetivo de Colombia 5.0 Bogotá 2026 fue impulsar la transformación digital del país utilizando la tecnología como herramienta
+                para mejorar la calidad de vida, la productividad y la innovación en Colombia. El evento fue organizado por el Ministerio TIC y
                 se realizó en Corferias, Bogotá.
             </p>
         </div>
 
-        <a href="primeraConferencia.html"><button data-es="Saber más" data-en="Learn more">Saber más</button></a>
     </div>
 
-    <script>
-        var idiomaActual = 'es';
-
-        function traducir() {
-            var boton = document.querySelector('.botonTraduccion button');
-            if (idiomaActual === 'es') {
-                idiomaActual = 'en';
-                boton.textContent = 'Español';
-                document.documentElement.lang = 'en';
-            } else {
-                idiomaActual = 'es';
-                boton.textContent = 'English';
-                document.documentElement.lang = 'es';
-            }
-            var elementos = document.querySelectorAll('[data-es][data-en]');
-            for (var i = 0; i < elementos.length; i++) {
-                elementos[i].textContent = elementos[i].getAttribute('data-' + idiomaActual);
-            }
-        }
-    </script>
-
+    <script src="java/index.js"></script>
 </body>
 </html>
